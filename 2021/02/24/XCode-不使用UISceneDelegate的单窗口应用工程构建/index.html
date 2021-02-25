@@ -14,7 +14,7 @@
 <meta property="og:description" content="AppDelegate.h文件添加UIWindow属性，AppDelegate.m文件添加对应的视图控制器代码。 12345678910111213&#x2F;&#x2F; AppDelegate.h@property (strong, nonatomic) UIWindow * window;&#x2F;&#x2F; AppDelegate.m- (BOOL)application:(UIAp">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-24T14:43:15.000Z">
-<meta property="article:modified_time" content="2021-02-25T06:58:33.356Z">
+<meta property="article:modified_time" content="2021-02-25T07:00:36.583Z">
 <meta property="article:author" content="Junfenghu">
 <meta property="article:tag" content="XCode">
 <meta property="article:tag" content="项目构建">
@@ -154,7 +154,7 @@
 <li><p>AppDelegate.h文件添加UIWindow属性，AppDelegate.m文件添加对应的视图控制器代码。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; AppDelegate.h</span><br><span class="line">@property (strong, nonatomic) UIWindow * window;</span><br><span class="line">&#x2F;&#x2F; AppDelegate.m</span><br><span class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions &#123;</span><br><span class="line">    &#x2F;&#x2F; Override point for customization after application launch.</span><br><span class="line">    self.window &#x3D; [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];</span><br><span class="line">    [self.window setBackgroundColor:[UIColor whiteColor]];</span><br><span class="line">    ViewController *con &#x3D; [[ViewController alloc] init];</span><br><span class="line">    UINavigationController *nav &#x3D; [[UINavigationController alloc] initWithRootViewController:con];</span><br><span class="line">    [self.window setRootViewController:nav];</span><br><span class="line">    [self.window makeKeyAndVisible];</span><br><span class="line">    return YES;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Self.window 的 rootViewController 的 backgroundColor 属性设置为任意颜色（默认是黑色）</p>
+<li><p><code>self.window</code> 的 <code>rootViewController</code> 的 <code>backgroundColor</code> 属性设置为任意颜色（默认是黑色）</p>
 </li>
 <li><p>AppDelegate.m里 <code>#pragma mark - UISceneSession lifecycle</code>部分的函数代码删掉（<strong>这个很重要，不然界面还是一片黑色</strong>）</p>
 </li>
